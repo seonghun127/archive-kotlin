@@ -4,8 +4,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class FlywayAndDBunitApplication
+class FlywayAndDBUnitApplication
 
 fun main(args: Array<String>) {
-    runApplication<FlywayAndDBunitApplication>(*args)
+    runApplication<FlywayAndDBUnitApplication>(*args)
 }
