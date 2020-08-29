@@ -23,8 +23,9 @@ dependencies {
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-//    runtimeOnly("mysql:mysql-connector-java")
-    runtimeOnly("com.h2database:h2")
+    runtimeOnly("mysql:mysql-connector-java")
+//    runtimeOnly("com.h2database:h2")
+    implementation("org.flywaydb:flyway-core:6.5.5")
     testImplementation("org.springframework.boot:spring-boot-starter-test") {
         exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
     }
@@ -39,4 +40,11 @@ tasks.withType<KotlinCompile> {
         freeCompilerArgs = listOf("-Xjsr305=strict")
         jvmTarget = "11"
     }
+}
+
+flyway {
+    url = "jdbc:mysql://localhost:13306/testdb"
+    user = "root"
+    password = "1234"
+    locations = arrayOf("filesystem:${file("src/migration").absolutePath}")
 }
