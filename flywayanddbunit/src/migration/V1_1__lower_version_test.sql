@@ -1,0 +1,1 @@
+INSERT INTO team (name) values ('team_name_test');
