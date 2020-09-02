@@ -27,6 +27,8 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test") {
         exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
     }
+    testImplementation("com.github.springtestdbunit:spring-test-dbunit:1.3.0")
+    testImplementation("org.dbunit:dbunit:2.6.0")
 }
 
 tasks.withType<Test> {

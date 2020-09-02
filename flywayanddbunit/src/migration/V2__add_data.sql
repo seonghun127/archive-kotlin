@@ -1,1 +1,1 @@
-INSERT INTO member (name, age) values ('name', 28);
+INSERT INTO members (name, age) values ('name', 28);
