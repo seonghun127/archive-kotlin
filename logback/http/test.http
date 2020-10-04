@@ -1,0 +1,19 @@
+### INFO
+
+GET http://localhost:8080/info
+
+### DEBUG
+
+GET http://localhost:8080/debug
+
+### ERROR
+
+GET http://localhost:8080/error
+
+### WARN
+
+GET http://localhost:8080/warn
+
+### TRACE
+
+GET http://localhost:8080/trace

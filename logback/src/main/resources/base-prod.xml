@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<included scan="true" scanPeriod="20 seconds">
+    <property name="LOG_PATH" value="./logback/log/"/>
+    <include resource="appender.xml" />
+
+    <root level="INFO">
+        <appender-ref ref="ASYNC" />
+    </root>
+
+    <logger name="com.example.logback.controller" level="TRACE"/>
+</included>
