@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <included>
     <property name="LOG_PATH" value="./logback/log/"/>
-    <include resource="appender.xml" />
+    <include resource="console-appender.xml" />
+    <include resource="async-file-appender.xml" />
+    <include resource="logstash-appender.xml" />
 
     <root level="INFO">
         <appender-ref ref="ASYNC" />
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="STASH" />
     </root>
 
     <logger name="com.example.logback.controller" level="TRACE"/>
